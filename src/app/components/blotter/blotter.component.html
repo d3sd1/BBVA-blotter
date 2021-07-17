@@ -1,0 +1,19 @@
+<input
+  type="text"
+  style="padding:8px;margin:15px auto;width:30%;"
+  placeholder="Type to filter the name column..."
+  (keyup)="updateFilter($event)"
+/>
+<button (click)="export()">Exportar datos</button>
+<ngx-datatable
+  #table
+  class="material"
+  [columns]="columns"
+  [columnMode]="ColumnMode.force"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  rowHeight="auto"
+  [limit]="10"
+  [rows]="rows"
+>
+</ngx-datatable>
